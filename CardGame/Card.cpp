@@ -23,5 +23,5 @@ string Card::colour()
 
 void Card::print()
 {
-	cout << colour() << " " << number() << endl;
+	cout << colour() << " " << number() << endl;		//prints the colour and number on card on screen
 }
