@@ -2,6 +2,9 @@
 
 using namespace std;
 
+Card::Card()
+{}
+
 Card::Card(int xValue, string xColor)
 {
 	value = xValue;			//initialising private variable value(number)

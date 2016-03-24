@@ -12,6 +12,7 @@ private:
 	string color;		//card colour, Red or Black
 
 public:
+	Card();
 	Card(int, string);		//class Card constructor declaration
 	~Card();				//class Card destructor
 	int number();							//method number() return the number on the card
