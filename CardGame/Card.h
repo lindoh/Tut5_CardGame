@@ -17,7 +17,7 @@ public:
 	int number();							//method number() return the number on the card
 	string colour();						//method colour() returns the colour of card (red or black) as string
 	void print();							//method print() displays colour and number of card on screen
-
+	friend class DeckOfCards;				//DeckOfCards is now a friend of Card
 };
 
 #endif
