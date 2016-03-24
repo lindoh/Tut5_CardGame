@@ -9,7 +9,7 @@ using namespace std;
 class DeckOfCards
 {
 private:
-	Card *cardArray;		//cardArray stores a full deck of Cards
+	Card *cardDeck;		//cardArray stores a full deck of Cards
 	
 public:
 	DeckOfCards();			//default constructor
