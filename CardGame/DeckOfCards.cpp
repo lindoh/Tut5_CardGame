@@ -40,6 +40,8 @@ void DeckOfCards::shuffle()
 	int rand =0;			//rand is a random number
 	int temp1 = 0, temp2 =0;		//temporal variables will help to switch two random card positions
 
+	Card *PtrArray;			//a Card object to hold a current value of cardArray
+
 	srand(time(NULL));
 
 	for (int i = 0; i < 50; i++)
@@ -51,12 +53,11 @@ void DeckOfCards::shuffle()
 
 		if (temp1 != temp2)
 		{
+			PtrArray = new Card[20];
+			PtrArray[temp1] = cardArray[temp1];
 			cardArray[temp1] = cardArray[temp2];
-			cardArray[temp2] = cardArray[temp1];
+			cardArray[temp2] = PtrArray[temp1];
 		}
-
-		else
-			i -= 1;
 
 	}
 
