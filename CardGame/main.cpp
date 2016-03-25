@@ -7,11 +7,47 @@ using namespace std;
 void main()
 {
 	DeckOfCards deck;
-	deck.reset();
+	Card myCard;
 
-	cout << endl;
+	char temp;
+	bool quit = false;
+	
+	while (!quit)
+	{
+		cout << "Enter R to Reset card order Or Enter S to shuffle cards  " << endl;
+		cin >> temp;
 
-	deck.shuffle();
+		if (temp = 'R' || temp == 'r')
+			deck.reset();						//Unshuffled order of cards
+		else if (temp == 'S' || temp == 's')
+			deck.shuffle();						//shuffled cards order
 
-	cin.get();
+		
+		cout << "Enter D to Draw Card or Enter P to peek the Top Card : " << endl;
+		cin >> temp;
+
+		if (temp == 'D' || temp == 'd')
+			deck.draw().print();				//draw the Top card
+		else if (temp == 'P' || temp == 'p')
+			deck.peek().print();
+
+		cout << endl;
+
+		int num;
+		cout << "Enter 1 to get the number of cards still in the deck " << endl;
+		cin >> num;
+
+		if (num == 1)
+			cout << "  " << deck.numberOfCards() << " Cards Left " << endl<<endl;
+
+		cout << "Enter Q to continue " << endl;
+		cin >> temp;
+
+		if (temp == 'Q' || temp == 'q')
+			quit = false;
+
+	}
+
+	system("pause");
+	//cin.get();
 }
