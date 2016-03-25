@@ -14,12 +14,16 @@ void main()
 	
 	while (!quit)
 	{
-		cout << "Enter R to Reset card order Or Enter S to shuffle cards  " << endl;
+		cout << "Enter R to Reset card order  " << endl;
 		cin >> temp;
 
 		if (temp = 'R' || temp == 'r')
 			deck.reset();						//Unshuffled order of cards
-		else if (temp == 'S' || temp == 's')
+		
+		cout << "Enter S to shuffle cards " << endl;
+		cin >> temp;
+		
+		if (temp == 'S' || temp == 's')
 			deck.shuffle();						//shuffled cards order
 
 		
